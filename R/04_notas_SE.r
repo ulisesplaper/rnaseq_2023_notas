@@ -33,3 +33,14 @@ rse <- SummarizedExperiment(
 
 ## Exploremos el objeto resultante
 rse
+
+## Número de genes y muestras
+dim(rse)
+
+## Ejercicio
+# Comando 1
+rse[1:2, ]
+
+## Comando 2
+rse[, c("A", "D", "F")]
+
