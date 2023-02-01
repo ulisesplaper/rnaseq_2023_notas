@@ -44,3 +44,6 @@ rse[1:2, ]
 ## Comando 2
 rse[, c("A", "D", "F")]
 
+## Explora el objeto rse de forma interactiva
+library("iSEE")
+iSEE::iSEE(rse)
