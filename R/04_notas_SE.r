@@ -47,3 +47,9 @@ rse[, c("A", "D", "F")]
 ## Explora el objeto rse de forma interactiva
 library("iSEE")
 iSEE::iSEE(rse)
+
+BiocManager::install('spatialLIBD')
+
+## Descarguemos unos datos de spatialLIBD
+sce_layer <- spatialLIBD::fetch_data("sce_layer")
+iSEE::iSEE(sce_layer)
