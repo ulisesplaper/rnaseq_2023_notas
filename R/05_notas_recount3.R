@@ -67,5 +67,5 @@ colData(rse_gene_SRP009615)[
   ,
   grepl("^sra_attribute", colnames(colData(rse_gene_SRP009615)))
 ]
-
+# Visualizar el objeto de forma interactiva
 iSEE::iSEE(rse_gene_SRP009615)
