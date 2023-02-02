@@ -69,4 +69,8 @@ iSEE::iSEE(rse)
 
 ## Descarguemos unos datos de spatialLIBD
 sce_layer <- spatialLIBD::fetch_data("sce_layer")
+sce_layer
+## Revisemos el tamaño de este objeto
+lobstr::obj_size(sce_layer)
+
 iSEE::iSEE(sce_layer)
