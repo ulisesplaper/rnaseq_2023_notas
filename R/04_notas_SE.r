@@ -73,4 +73,5 @@ sce_layer
 ## Revisemos el tamaño de este objeto
 lobstr::obj_size(sce_layer)
 
+# Explorar el objeto de forma interactiva
 iSEE::iSEE(sce_layer)
