@@ -6,3 +6,9 @@ output: html_document
 ---
 
 ![](images/paste-135F7043.png)
+
+Interpretar `ResponseResistant.Treatmentpre` del ejercicio 2.
+
+Obtenemos `ResponseResistant.Treatment` al restar la columna 2 menos la columna 1 de la tabla Response=Resistant. Las columnas que se restan son pre - post tratamiento de las respuesta resistente. Esto se interpreta como los cambios en los niveles de expresion entre las dos condiciones (pre y post).
+
+Si, por ejemplo, `ResponseResistant.Treatment` iguala a -7, eso significa que la expresion es 7 veces menor en la condicion pre que en la post.
