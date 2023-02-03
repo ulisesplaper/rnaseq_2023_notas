@@ -281,3 +281,28 @@ pheatmap(
   annotation_col = df
 )
 dev.off()
+
+## ----"centered_and_scaled", out.height="1100px"-----------------------------------------------------------------------
+## Versión con centering y scaling en los renglones (los genes)
+pheatmap::pheatmap(
+  exprs_heatmap,
+  cluster_rows = TRUE,
+  cluster_cols = TRUE,
+  show_rownames = TRUE,
+  show_colnames = FALSE,
+  annotation_col = df,
+  scale = "row"
+)
+
+
+## ----"complexheatmap", out.height="1100px"----------------------------------------------------------------------------
+## Misma versión pero ahora con ComplexHeatmap en vez del paquete pheatmap
+ComplexHeatmap::pheatmap(
+  exprs_heatmap,
+  cluster_rows = TRUE,
+  cluster_cols = TRUE,
+  show_rownames = TRUE,
+  show_colnames = FALSE,
+  annotation_col = df,
+  scale = "row"
+)
