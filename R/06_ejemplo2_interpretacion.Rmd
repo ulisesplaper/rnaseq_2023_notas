@@ -5,7 +5,7 @@ date: "2023-02-02"
 output: html_document
 ---
 
-![](images/paste-135F7043.png)
+![](https://github.com/ulisesplaper/rnaseq_2023_notas/blob/master/images/06_ExploreModelMatrix_ejemplo2.png?raw=true)
 
 Interpretar `ResponseResistant.Treatmentpre` del ejercicio 2.
 
