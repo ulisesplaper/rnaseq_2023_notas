@@ -69,7 +69,7 @@ colData(rse_gene_SRP045638)[
   grepl("^sra_attribute", colnames(colData(rse_gene_SRP045638)))
 ]
 
-
+head(rse_gene_SRP045638)
 ## ----re_cast-----------------------
 ## Pasar de character a numeric o factor
 rse_gene_SRP045638$sra_attribute.age <- as.numeric(rse_gene_SRP045638$sra_attribute.age)
@@ -148,7 +148,7 @@ mod <- model.matrix(~ prenatal + sra_attribute.RIN + sra_attribute.sex + assigne
 )
 colnames(mod)
 
-
+?match
 ## ----run_limma---------------------
 library("limma")
 vGene <- voom(dge, mod, plot = TRUE)
@@ -194,7 +194,20 @@ pheatmap(
   annotation_col = df
 )
 
-
+# Asignar los nombres de los genes al heatmap
+## Obtener los nombres de los 50 genes
+grlnames <- rowRanges(rse_gene_SRP045638)[,'gene_name']
+gene_names <- grlnames[rownames(exprs_heatmap)]$gene_name
+rownames(exprs_heatmap) <- gene_names
+# generar el heatmap
+pheatmap(
+  exprs_heatmap,
+  cluster_rows = TRUE,
+  cluster_cols = TRUE,
+  show_rownames = TRUE,
+  show_colnames = FALSE,
+  annotation_col = df
+)
 ## ----plot_mds----------------------
 ## Para colores
 library("RColorBrewer")
